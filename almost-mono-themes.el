@@ -37,7 +37,7 @@
 	      (weakest    . "#efefef")
 	      (highlight  . "#fda50f")
 	      (warning	  . "#ff0000")
-	      (success	  . "#00ff00")
+	      (success	  . "#228B22")
 	      (string     . "#3c5e2b")))
 
     (black . ((background . "#000000")
@@ -47,7 +47,7 @@
 	      (weakest	  . "#222222")
 	      (highlight  . "#fda50f")
 	      (warning	  . "#ff0000")
-	      (success	  . "#00ff00")
+	      (success	  . "#228b22")
 	      (string     . "#a7bca4")))
 
     (gray .  ((background . "#2b2b2b")
@@ -57,7 +57,7 @@
 	      (weakest	  . "#222222")
 	      (highlight  . "#fda50f")
 	      (warning	  . "#ff0000")
-	      (success	  . "#00ff00")
+	      (success	  . "#228b22")
 	      (string     . "#a7bca4")))
 
     (cream . ((background . "#f0e5da")
@@ -67,7 +67,7 @@
 	      (weakest    . "#dbd0c5")
 	      (highlight  . "#fda50f")
 	      (warning	  . "#ff0000")
-	      (success	  . "#00ff00")
+	      (success	  . "#228b22")
 	      (string     . "#3c5e2b")))))
 
 (defmacro almost-mono-themes--variant-with-colors (variant &rest body)
@@ -105,10 +105,10 @@
 
       ;; mode line
       (mode-line (:box (:line-width -1 :color ,weaker)
-		       :background ,weakest :foreground ,foreground))
+		              :background ,weakest :foreground ,foreground))
 
       (mode-line-inactive (:box (:line-width -1 :color ,weaker)
-				:background ,background :foreground ,weaker))
+				                   :background ,background :foreground ,weaker))
 
       ;; font lock
       (font-lock-keyword-face (:bold t))
@@ -117,8 +117,8 @@
       (font-lock-warning-face (:foreground ,foreground :underline (:color ,warning :style wave)))
       (font-lock-builtin-face (:bold t))
       (font-lock-variable-name-face (:foreground ,foreground :italic t))
-      (font-lock-constant-face (:bold t :italic t))
-      (font-lock-type-face (:italic t))
+      (font-lock-constant-face (:bold t))
+      (font-lock-type-face (:bold t))
       (font-lock-preprocessor-face (:italic t))
       (font-lock-comment-face (:foreground ,weak :italic t))
       (font-lock-string-face (:foreground ,string))
