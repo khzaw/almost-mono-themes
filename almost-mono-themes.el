@@ -181,6 +181,10 @@
       ;; org mode
       (org-table (:foreground ,weak))
 
+      ;; go-test-mode
+      (go-test--standard-face (:foreground ,string))
+      (go-test--ok-face (:foreground ,success))
+
       ))))
 
 
