@@ -128,6 +128,11 @@
       (linum (:inherit line-number))
       (vertical-border (:foreground ,weaker))
 
+      ;; forge
+      (forge-pullreq-open (:foreground ,foreground))
+      (forge-pullreq-merged (:foreground ,weak))
+      (forge-pullreq-rejected (:foreground ,weaker :strike-through t))
+
       ;; eshell
       (eshell-prompt (:foreground ,foreground :bold t))
       (eshell-ls-directory (:foreground ,foreground :bold t))
