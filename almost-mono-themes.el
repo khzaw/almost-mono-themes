@@ -102,6 +102,7 @@
       (isearch (:background ,weak :foreground ,foreground :bold t))
       (lazy-highlight (:background ,weaker :foreground ,foreground))
       (link (:underline t))
+      ;; (shadow (:foreground ,weaker))
 
       ;; mode line
       (mode-line (:box (:line-width -1 :color ,weaker)
@@ -184,6 +185,8 @@
       ;; go-test-mode
       (go-test--standard-face (:foreground ,string))
       (go-test--ok-face (:foreground ,success))
+
+      (treesitter-context-focus-unfocused (:foreground ,weaker))
 
       ))))
 
