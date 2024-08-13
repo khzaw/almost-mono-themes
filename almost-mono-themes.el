@@ -50,7 +50,7 @@
 	            (success	  . "#228b22")
 	            (string     . "#a7bca4")))
 
-    (orange . ((background . "#d55d26")
+    (orange . ((background . "#d14300")
                (foreground . "#151414")
                (weak . "#434242")
                (weaker . "#727272")
