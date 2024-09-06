@@ -34,7 +34,7 @@
 	            (foreground . "#000000")
 	            (weak	  . "#888888")
 	            (weaker	  . "#dddddd")
-	            (weakest    . "#efefef")
+	            (weakest    . "#eeeeee")
 	            (highlight  . "#fda50f")
 	            (warning	  . "#ff0000")
 	            (success	  . "#228B22")
