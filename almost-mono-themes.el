@@ -126,16 +126,15 @@
       (font-lock-keyword-face (:bold t))
       (font-lock-function-name-face (:bold t))
       (font-lock-variable-name-face (:foreground ,foreground))
-      (font-lock-warning-face (:foreground ,foreground :underline (:color ,warning :style wave)))
+      (font-lock-warning-face (:foreground ,foreground :underline (:color ,warning)))
       (font-lock-builtin-face (:bold t))
-      (font-lock-variable-name-face (:foreground ,foreground :italic t))
       (font-lock-property-use-face (:bold t))
-      (font-lock-constant-face (:bold t))
+      (font-lock-constant-face (:foreground ,foreground))
       (font-lock-type-face (:bold t))
       (font-lock-preprocessor-face (:italic t))
       (font-lock-comment-face (:foreground ,weak :italic t))
       (font-lock-string-face (:foreground ,string))
-      (font-lock-doc-face (:inherit font-lock-comment-face))
+      (font-lock-doc-face (:inherit font-lock-comment-face :italic nil))
       (line-number (:foreground ,weaker))
       (linum (:inherit line-number))
       (vertical-border (:foreground ,weaker))
@@ -197,7 +196,13 @@
       (go-test--standard-face (:foreground ,string))
       (go-test--ok-face (:foreground ,success))
 
+      ;; treesitter-context
       (treesitter-context-focus-unfocused (:foreground ,weaker))
+
+
+      ;; consult
+      (consult-line-number-wrapped (:underline nil))
+
 
       ))))
 
