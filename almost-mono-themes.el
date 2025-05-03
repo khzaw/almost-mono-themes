@@ -204,7 +204,7 @@
       (consult-line-number-wrapped (:underline nil))
 
       ;; flymake
-      (flymake-error (:underline (:style line)))
+      (flymake-error (:underline (:color ,warning :style line)))
 
       ))))
 
