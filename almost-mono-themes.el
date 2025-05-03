@@ -203,6 +203,8 @@
       ;; consult
       (consult-line-number-wrapped (:underline nil))
 
+      ;; flymake
+      (flymake-error (:underline line))
 
       ))))
 
