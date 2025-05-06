@@ -131,7 +131,7 @@
       (font-lock-property-use-face (:bold t))
       (font-lock-constant-face (:foreground ,foreground))
       (font-lock-type-face (:bold t))
-      (font-lock-preprocessor-face (:italic t))
+      (font-lock-preprocessor-face (:italic nil))
       (font-lock-comment-face (:foreground ,weak :italic t))
       (font-lock-string-face (:foreground ,string))
       (font-lock-doc-face (:foreground ,weak))
@@ -140,8 +140,8 @@
       (vertical-border (:foreground ,weaker))
 
       ;; forge
-      (forge-pullreq-open (:foreground ,foreground))
-      (forge-pullreq-merged (:foreground ,weak))
+      (forge-pullreq-open (:foreground ,foreground :bold nil))
+      (forge-pullreq-merged (:foreground ,weaker :bold nil))
       (forge-pullreq-rejected (:foreground ,weaker :strike-through t))
 
       ;; eshell
