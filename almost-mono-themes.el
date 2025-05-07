@@ -128,7 +128,7 @@
       (font-lock-variable-name-face (:foreground ,foreground))
       (font-lock-warning-face (:foreground ,foreground :underline (:color ,warning :style line)))
       (font-lock-builtin-face (:bold t))
-      (font-lock-property-use-face (:bold t))
+      ;; (font-lock-property-use-face (:bold t))
       (font-lock-constant-face (:foreground ,foreground))
       (font-lock-type-face (:foreground ,foreground))
       (font-lock-preprocessor-face (:italic nil))
