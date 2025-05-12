@@ -33,15 +33,16 @@
   '((white . ((background  . "#ffffff")
 	            (foreground  . "#000000")
 	            (weak        . "#999999")
-	            (weaker      . "#dddddd")
+	            (weaker      . "#e0e0e0")
 	            (weakest     . "#eeeeee")
 	            (highlight   . "#fda50f")
 	            (warning     . "#ff0000")
 	            (success     . "#228B22")
 	            (string      . "#3c5e2b")))
 
-    (black . ((background  . "#000000")
+    (black . ((background  . "#1a1a1a")
 	            (foreground  . "#ffffff")
+              (bold        . "#e0e0e0")
 	            (weak        . "#aaaaaa")
 	            (weaker      . "#666666")
 	            (weakest     . "#222222")
@@ -206,6 +207,9 @@
 
       ;; flymake
       (flymake-error (:underline (:color ,warning :style line)))
+
+      ;; jinx
+      (jinx-misspelled (:underline (:color ,highlight :style line)))
 
       ))))
 
