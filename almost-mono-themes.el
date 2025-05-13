@@ -108,7 +108,7 @@
       (default (:background ,background :foreground ,foreground))
       (fringe  (:background ,background))
       (region  (:background ,highlight  :foreground ,foreground))
-      (show-paren-match (:background ,background :foreground ,success :bold t))
+      (show-paren-match (:background ,background :foreground ,success :bold nil))
       (show-paren-mismatch (:background ,background :foreground ,warning :bold t))
       (minibuffer-prompt (:weight bold :foreground ,foreground))
       (isearch (:background ,weak :foreground ,foreground :bold t))
@@ -207,6 +207,7 @@
 
       ;; flymake
       (flymake-error (:underline (:color ,warning :style line)))
+      (flymake-warning (:underline (:color ,weak :style line)))
 
       ;; jinx
       (jinx-misspelled (:underline (:color ,highlight :style line)))
