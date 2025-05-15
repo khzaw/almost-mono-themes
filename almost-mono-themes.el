@@ -212,6 +212,10 @@
       ;; jinx
       (jinx-misspelled (:underline (:color ,highlight :style line)))
 
+      ;; magit
+      (magit-diff-added-highlight (:background "#c1f2d1"))
+      (magit-diff-context-hightlight (:background "#f3f3f3"))
+      (magit-diff-hunk-heading (:bold t))
       ))))
 
 
