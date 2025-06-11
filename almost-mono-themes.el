@@ -73,7 +73,15 @@
                (highlight  . "#fda50f")
                (warning    . "#67c2e1")
                (success    . "#51dd73")
-               (string     . "#9faf96")))
+               (string     . "#9faf96")
+               (bg-added    . "")
+               (bg-added-faint    . "")
+               (bg-removed   . "")
+               (fg-added    . "")
+               (fg-added-intense    . "")
+               (fg-removed    . "")
+               (fg-removed-intense    . "")
+               ))
 
     (gray  . ((background  . "#2b2b2b")
 	            (foreground  . "#ffffff")
@@ -83,7 +91,15 @@
 	            (highlight   . "#fda50f")
 	            (warning     . "#ff0000")
 	            (success     . "#228b22")
-	            (string      . "#a7bca4")))
+	            (string      . "#a7bca4")
+              (bg-added    . "")
+              (bg-added-faint    . "")
+              (bg-removed   . "")
+              (fg-added    . "")
+              (fg-added-intense    . "")
+              (fg-removed    . "")
+              (fg-removed-intense    . "")
+              ))
 
 
     (cream . ((background  . "#f0e5da")
@@ -94,21 +110,29 @@
 	            (highlight   . "#fda50f")
 	            (warning     . "#ff0000")
 	            (success     . "#228b22")
-	            (string      . "#3c5e2b")))))
+	            (string      . "#3c5e2b")
+              (bg-added    . "")
+              (bg-added-faint    . "")
+              (bg-removed   . "")
+              (fg-added    . "")
+              (fg-added-intense    . "")
+              (fg-removed    . "")
+              (fg-removed-intense    . ""))
+           )))
 
 (defmacro almost-mono-themes--variant-with-colors (variant &rest body)
   "Execute BODY in a scope where the different colors for given VARIANT is bound."
   `(let* ((colors (or (cdr (assoc ,variant almost-mono-themes-colors))
-		      (error "No such theme variant")))
-	  (background (cdr (assoc 'background colors)))
-	  (foreground (cdr (assoc 'foreground colors)))
-	  (weak	      (cdr (assoc 'weak colors)))
-	  (weaker     (cdr (assoc 'weaker colors)))
-	  (weakest    (cdr (assoc 'weakest colors)))
-	  (highlight  (cdr (assoc 'highlight colors)))
-	  (warning    (cdr (assoc 'warning colors)))
-	  (success    (cdr (assoc 'success colors)))
-	  (string     (cdr (assoc 'string colors))))
+		                  (error "No such theme variant")))
+	        (background (cdr (assoc 'background colors)))
+	        (foreground (cdr (assoc 'foreground colors)))
+	        (weak	      (cdr (assoc 'weak colors)))
+	        (weaker     (cdr (assoc 'weaker colors)))
+	        (weakest    (cdr (assoc 'weakest colors)))
+	        (highlight  (cdr (assoc 'highlight colors)))
+	        (warning    (cdr (assoc 'warning colors)))
+	        (success    (cdr (assoc 'success colors)))
+	        (string     (cdr (assoc 'string colors))))
      ,@body))
 
 (defmacro almost-mono-themes--faces-spec ()
@@ -132,10 +156,10 @@
 
       ;; mode line
       (mode-line (:box (:line-width -1 :color ,weaker)
-		              :background ,weakest :foreground ,foreground))
+		                   :background ,weakest :foreground ,foreground))
 
       (mode-line-inactive (:box (:line-width -1 :color ,weaker)
-				                   :background ,background :foreground ,weaker))
+				                        :background ,background :foreground ,weaker))
 
       ;; font lock
       (font-lock-keyword-face (:bold t))
@@ -238,7 +262,9 @@
       (magit-diff-removed (:background ,bg-removed-faint :foreground ,fg-removed))
       (magit-diff-removed-highlight (:background ,bg-removed :foreground ,fg-removed))
       (magit-diff-context-highlight (:background "#f3f3f3"))
-      (magit-diff-hunk-heading (:bold t))))))
+      (magit-diff-hunk-heading (:bold t))
+
+      ))))
 
 
 (defun almost-mono-themes--variant-name (variant)
@@ -261,7 +287,7 @@
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
   (add-to-list 'custom-theme-load-path
-	       (file-name-as-directory (file-name-directory load-file-name))))
+	             (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide 'almost-mono-themes)
 
