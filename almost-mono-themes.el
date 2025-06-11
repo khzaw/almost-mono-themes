@@ -30,26 +30,40 @@
 ;;; Code:
 
 (defconst almost-mono-themes-colors
-  '((white . ((background  . "#ffffff")
-	            (foreground  . "#000000")
-	            (weak        . "#999999")
-	            (weaker      . "#e0e0e0")
-	            (weakest     . "#eeeeee")
-	            (highlight   . "#fda50f")
-	            (warning     . "#ff0000")
-	            (success     . "#228B22")
-	            (string      . "#3c5e2b")))
+  '((white . ((background         . "#ffffff")
+	            (foreground         . "#000000")
+	            (weak               . "#999999")
+	            (weaker             . "#e0e0e0")
+	            (weakest            . "#eeeeee")
+	            (highlight          . "#fda50f")
+	            (warning            . "#ff0000")
+	            (success            . "#228B22")
+	            (string             . "#3c5e2b")
+              (bg-added           . "#c1f2d1")
+              (bg-added-faint     . "#d8f8e1")
+              (bg-removed         . "#ffd8d5")
+              (fg-added           . "#005000")
+              (fg-added-intense   . "#006700")
+              (fg-removed         . "#8f1313")
+              (fg-removed-intense . "#aa2222")))
 
-    (black . ((background  . "#1a1a1a")
-	            (foreground  . "#ffffff")
-              (bold        . "#e0e0e0")
-	            (weak        . "#aaaaaa")
-	            (weaker      . "#666666")
-	            (weakest     . "#222222")
-	            (highlight   . "#fda50f")
-	            (warning     . "#ff0000")
-	            (success     . "#228b22")
-	            (string      . "#a7bca4")))
+    (black . ((background         . "#1a1a1a")
+	            (foreground         . "#ffffff")
+              (bold               . "#e0e0e0")
+	            (weak               . "#aaaaaa")
+	            (weaker             . "#666666")
+	            (weakest            . "#222222")
+	            (highlight          . "#fda50f")
+	            (warning            . "#ff0000")
+	            (success            . "#228b22")
+	            (string             . "#a7bca4")
+              (bg-added           . "#00381f")
+              (bg-added-faint     . "#002910")
+              (bg-removed         . "#4f1119")
+              (fg-added           . "#a0e0a0")
+              (fg-added-intense   . "#80e080")
+              (fg-removed         . "#ffbfbf")
+              (fg-removed-intense . "#ff9095")))
 
     (orange . ((background . "#d14300")
                (foreground . "#151414")
@@ -201,7 +215,6 @@
       ;; treesitter-context
       (treesitter-context-focus-unfocused (:foreground ,weaker))
 
-
       ;; consult
       (consult-line-number-wrapped (:underline nil))
 
@@ -212,11 +225,20 @@
       ;; jinx
       (jinx-misspelled (:underline (:color ,highlight :style line)))
 
+      ;; diff
+      (diff-added (:background ,bg-added :foreground ,fg-added))
+      (diff-removed (:background ,bg-removed :foreground ,fg-removed))
+      (diff-refine-added (:background ,bg-added :foreground ,fg-added))
+      (diff-refine-added (:background ,bg-added :foreground ,fg-added))
+      (diff-refine-removed (:background ,bg-removed :foreground ,fg-removed))
+
       ;; magit
-      (magit-diff-added-highlight (:background "#c1f2d1"))
-      (magit-diff-context-hightlight (:background "#f3f3f3"))
-      (magit-diff-hunk-heading (:bold t))
-      ))))
+      (magit-diff-added (:background ,bg-added :foreground ,fg-added))
+      (magit-diff-added-highlight (:background ,bg-added :fore-ground ,fg-added))
+      (magit-diff-removed (:background ,bg-removed-faint :foreground ,fg-removed))
+      (magit-diff-removed-highlight (:background ,bg-removed :foreground ,fg-removed))
+      (magit-diff-context-highlight (:background "#f3f3f3"))
+      (magit-diff-hunk-heading (:bold t))))))
 
 
 (defun almost-mono-themes--variant-name (variant)
